@@ -1,0 +1,113 @@
+					WORKSHEET 2
+					  PYTHON
+
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following is not a core datatype in python?
+A) list B) struct
+C) tuple C) set
+
+Answer - B) struct
+
+2. Which of the following is an invalid variable name in python?
+A) _init_ B) no_1
+C) 1_no D) _1
+
+Answer - C) 1_no
+
+3. Which one of the following is a keyword in python?
+A) in B) _init_
+C) on D) foo
+
+Answer - A) in
+
+4. In which of the following manner are the operators of the same precedence executed in python?
+A) Left to Right B) BODMAS
+C) Right to Left D) None of these
+
+Answer - A) Left to Right
+
+5. Arrange the following in decreasing order of the precedence when they appear in an expression in python?
+i) Multiplication ii) Division iii) Exponential iv) Parentheses
+A) iii – iv – ii – i B) iii – iv – i – ii
+C) iv – iii – ii – i D) iii – ii – i – iv
+
+Answer - C) iv – iii – ii – i
+
+6. (28//6)**3/3%3 = ?
+A) 7.1111… B) 0
+C) 0.3333… D) 1
+
+Answer - C) 0.3333…
+
+7. Which of the following is not equal to x16 ?
+A) x**4**4 B) x**16
+C) x^16 D) (x**4)**4
+
+Answer - A) x**4**4
+
+8. a = input(“Enter an integer”). What will be the data type of a?
+A) int B) str
+C) float D) double
+
+Answer - B) str
+
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+9. Which of the following statements are correct?
+A) Division and multiplication have same precedence in python
+B) Python’s operators’ precedence is based on PEDMAS
+C) Python’s operators’ precedence is based on VBODMAS
+D) In case of operators’ having same precedence, the one on the left side is executed first.
+
+Answer - A,B,C,D
+
+10. Which of the following is(are) valid statement(s) in python?
+A) abc = 1,000,000 B) a b c = 1000 2000 3000
+C) a,b,c = 1000, 2000, 3000 D) a_b_c = 1,000,000
+
+Answer - C) a,b,c = 1000, 2000, 3000
+
+Q11 to Q13 are subjective questions, answer them briefly
+11. Differentiate between a list, tuple, set and dictionary.
+
+Answer - A list is mutable - Ability to be mutated, to be changed. A list is mutable, so it is possible to reassign and delete individual items as well.
+Tuple - It is immutable. This means that while you can reassign or delete an entire tuple, you cannot do the same to a single item or a slice.
+set - not immutable, unlike a tuple.It will rearranged the elements in an ascending order , methods like discard(), pop(), clear(), remove(), add(), and more. Functions like len() and max() also apply on sets
+dictionary - dictionary holds key-value pairs instead of single values, this differentiates a dictionary from a set.
+
+12. Are strings mutable in python? Suppose you have a string “I+Love+Python”, write a small code to replace ‘+’
+with space in python.
+
+Answer - No , string is immutable. You cannot overwrite the values of immutable objects. However, you can assign the variable again.
+
+Program:
+Samplestring = 'I+Love+Python'
+replaced_Samplestring = Samplestring.replace('+', ' ')
+print('Original string:', Samplestring)
+print('Replaced string:', replaced_Samplestring)
+
+Output:
+Original string: I+Love+Python
+Replaced string: I Love Python
+
+13. What does the function ord() do in python? Explain with example. Also, write down the function for getting
+the datatype of a variable in python.
+
+Answer - The ord() function returns the number representing the unicode code of a specified character.
+
+Program:
+x = ord("h")
+print(x)
+Output:
+104
+
+Function of datatype of variable - A variable is a named location used to store data in the memory. It is helpful to think of variables as a container that holds data that can be changed later.
+A constant is a type of variable whose value cannot be changed. It is helpful to think of constants as containers that hold information which cannot be changed
+Every value in Python has a datatype. Since everything is an object in Python programming, data types are actually classes and variables are instance (object) of these classes
+
+Q14 and Q15 are programming questions. Answer them in Jupyter Notebook.
+14. Write a python program to solve a quadratic equation of the form 𝑎𝑥
+2 + 𝑏𝑥 + 𝑐 = 0. Where a, b and c are to
+be taken by user input. Handle the erroneous input, such as ‘a’ should not be equal to 0.
+
+15. Write a python program to find the sum of first ‘n’ natural numbers without using any loop. Ask user to input
+the value of ‘n’.

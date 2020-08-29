@@ -1,0 +1,90 @@
+									WORKSHEET-1
+									   SQL
+Q1 and Q2 have one or more correct answer. Choose all the correct option to answer your question.
+
+1. Which of the following is/are DDL commands in SQL?
+ A) Create B) Update
+ C) Delete D) ALTER
+Answer - A,D
+
+2. Which of the following is/are DML commands in SQL?
+ A) Update B) Delete
+ C) Select D) Drop
+Answer - A,B,C
+
+Q3 to Q10 have only one correct answer. Choose the correct option to answer your question.
+
+3. Full form of SQL is:
+ A) Strut querying language B) Structured Query Language
+ C) Simple Query Language D) None of them
+Answer - B) Structured Query Language
+
+4. Full form of DDL is:
+ A) Descriptive Designed Language B) Data Definition Language
+ C) Data Descriptive Language D) None of the above.
+Answer - B) Data Definition Language
+
+5. DML is:
+ A) Data Manipulation Language B) Data Management Language
+ C) Data Modeling Language D) None of these
+Answer - A) Data Manipulation Language
+
+6. Which of the following statements can be used to create a table with column B int type and C float type?
+ A) Table A (B int, C float) B) Create A (b int, C float)
+ C) Create Table A (B int,C float) D) All of them
+Answer -  C) Create Table A (B int,C float)
+
+7. Which of the following statements can be used to add a column D (float type) to the table A created above?
+ A) Table A ( D float) B) Alter Table A ADD COLUMN D float
+ C) Table A( B int, C float, D float) D) None of them
+Answer - D) None of them
+
+8. Which of the following statements can be used to drop the column added in the above question?
+ A) Table A Drop D B) Alter Table A Drop Column D
+ C) Delete D from A D) None of them
+Answer - B) Alter Table A Drop Column D
+
+9. Which of the following statements can be used to change the data type (from float to int ) of the column D of
+table A created in above questions?
+ A) Table A (D float int) B) Alter Table A Alter Column D int
+ C) Alter Table A D float int D) Alter table A Column D float to int
+Answer - B) Alter Table A Alter Column D int
+
+10. Suppose we want to make Column B of Table A as primary key of the table. By which of the following
+statements we can do it?
+ A) Alter Table A Add Constraint Primary Key B B) Alter table (B primary key)
+ C) Alter Table A Add Primary key B D) None of them
+Answer - C) Alter Table A Add Primary key B
+
+Q11 to Q15 are subjective answer type questions, Answer them briefly.
+
+11. What is data-warehouse?
+Answer - A Data Warehousing (DW) is process for collecting and managing data from varied sources to provide meaningful business insights.
+A Data warehouse is typically used to connect and analyze business data from heterogeneous sources.
+The data warehouse is the core of the BI system which is built for data analysis and reporting.
+It is a blend of technologies and components which aids the strategic use of data.
+It is electronic storage of a large amount of information by a business which is designed for query and analysis instead of transaction processing.
+It is a process of transforming data into information and making it available to users in a timely manner to make a difference.
+
+12. What is the difference between OLTP VS OLAP?
+Answer -  Online transaction processing (OLTP) captures, stores, and processes data from transactions in real time.
+Online analytical processing (OLAP) uses complex queries to analyze aggregated historical data from OLTP systems.
+
+OLTP - system captures and maintains transaction data in a database. Each transaction involves individual database records made up of multiple fields or columns. Examples include banking and credit card activity or retail checkout scanning.In OLTP, the emphasis is on fast processing, because OLTP databases are read, written, and updated frequently. If a transaction fails, built-in system logic ensures data integrity.
+
+OLAP - applies complex queries to large amounts of historical data, aggregated from OLTP databases and other sources, for data mining, analytics, and business intelligence projects. In OLAP, the emphasis is on response time to these complex queries. Each query involves one or more columns of data aggregated from many rows. Examples include year-over-year financial performance or marketing lead generation trends. OLAP databases and data warehouses give analysts and decision-makers the ability to use custom reporting tools to turn data into information. Query failure in OLAP does not interrupt or delay transaction processing for customers, but it can delay or impact the accuracy of business intelligence insights
+
+13. What are the various characteristics of data-warehouse?
+Answer - three prominent data warehouse characteristics:
+Integrated: The way data is extracted and transformed is uniform, regardless of the original source.
+Time-variant: Data is organized via time-periods (weekly, monthly, annually, etc.).
+Non-volatile: A data warehouse is not updated in real-time. It is periodically updated via the uploading of data, protecting it from the influence of momentary change.
+
+14. What is Star-Schema??
+Answer - In the STAR Schema, the center of the star can have one fact table and a number of associated dimension tables. It is known as star schema as its structure resembles a star. The star schema is the simplest type of Data Warehouse schema. It is also known as Star Join Schema and is optimized for querying large data sets.
+the center which contains keys to every dimension table like Dealer_ID, Model ID, Date_ID, Product_ID, Branch_ID & other attributes like Units sold and revenue.
+
+15. What do you mean by SETL?
+Answer - Set Theory as a Language (or Set Language), SETL is a high-level programming language that's based on the mathematical theory of sets.
+A Set is an unordered collection data type that is iterable, mutable and has no duplicate elements. Python's set class represents the mathematical notion of a set.
+This is based on a data structure known as a hash table. Since sets are unordered, we cannot access items using indexes like we do in lists.
