@@ -1,0 +1,84 @@
+							WORKSHEET-3
+							   SQL
+
+Refer the following ERD and answer all the questions in this worksheet. You have to write the queries using mysql
+for the required Operation.
+
+ Customers: stores customer’s data.
+ Products: stores a list of scale model cars.
+ ProductLines: stores a list of product line categories.
+ Orders: stores sales orders placed by customers.
+ OrderDetails: stores sales order line items for each sales order.
+ Payments: stores payments made by customers based on their accounts.
+ Employees: stores all employee information as well as the organization structure such as who reports to whom.
+ Offices: stores sales office data.
+
+1. Write SQL query to create table Customers.
+
+Answer:
+mysql> CREATE TABLE CUSTOMERS (CUSTOMER_NUMBER INT(15) ,CUSTOMER_NAME VARCHAR(30),CONTACT_LASTNAME VARCHAR(25),
+    -> CONTACT_FIRSTNAME VARCHAR(25),PHONE INT(10),ADDRESSLINE1 VARCHAR(40),ADDRESSLINE2 VARCHAR(40),CITY CHAR(20),STATE CHAR(25),
+    -> POSTALCODE VARCHAR(15),COUNTRY VARCHAR(25),SALES_REPEMPLOYEE_NUMBER VARCHAR(30),CREDIT_LIMIT INT(7));
+
+2. Write SQL query to create table Orders.
+Answer:
+ create table ORDERS(ORDER_NUMBER INT(15),ORDER_DATE DATE,REQUIRED_DATE DATE,SHIPPED_DATE DATE,STATUS VARCHAR(30));
+
+3. Write SQL query to show all the columns data from the Orders Table.
+Answer:
+ SELECT * FROM ORDERS;
+
+4. Write SQL query to show all the comments from the Orders Table.
+Answer:
+ SELECT COMMENTS FROM ORDERS;
+
+5. Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+Answer:
+ SELECT orderDate,RequiredOrder from Orders;
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+Answer:
+ Select employeNumber, lastName, firstName from employees;
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+Answer:
+ select orderNumber, customerName from orders;
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another
+column.
+Answer:
+ select Customer_Name,salerep_employee_Name from customer;
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date
+from the payments table.
+Answer:
+ select Date,Totalpayment from payments;
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+Answer:
+ select products, productName, MSRP, productDescription from products;
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+Answer:
+ select productName, productDescription from products arrange by order limit 1 desc;
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+Answer:
+ select city from customers order by city_name limit 1 desc;
+
+13. Write a SQL query to get the name of the state having maximum number of customers.
+Answer:
+ select state from  customers order by state_name desc;
+
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second
+column for all the employees.
+Answer:
+ select employee_number,Full_name from employees;
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that
+order (quantityOrdered × priceEach).
+Answer:
+ select order_Number, customer_Name ,total _amount(quantityOrdered × priceEach) from orderdetails;
+
+
+ 
