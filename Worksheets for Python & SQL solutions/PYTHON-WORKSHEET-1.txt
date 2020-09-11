@@ -1,0 +1,73 @@
+					   WORKSHEET-1
+					     PYTHON
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following operators is used to calculate remainder in a division?
+A) # B) &
+C) % D) $
+
+Answer - C) %
+
+2. In python 2//3 is equal to?
+A) 0.666 B) 0
+C) 1 D) 0.67
+
+Answer - B) 0
+
+3. In python, 6<<2 is equal to?
+A) 36 B) 10
+C) 24 D) 45
+
+Answer - C) 24
+
+4. In python, 6&2 will give which of the following as output?
+A) 2 B) True
+C) False D) 0
+
+Answer - A) 2 
+
+5. In python, 6|2 will give which of the following as output?
+A) 2 B) 4
+C) 0 D) 16
+
+Answer - B) 4
+
+6. What does the finally keyword denotes in python?
+A) It is used to mark the end of the code
+B) It encloses the lines of code which will be executed if any error occurs while executing the lines of code in the
+ try block.
+C) the finally block will be executed no matter if the try block raises an error or not.
+D) None of the above
+
+Answer - A) It is used to mark the end of the code
+
+7. What does raise keyword is used for in python?
+A) It is used to raise an exception. B) It is used to define lambda function
+C) it's not a keyword in python. D) None of the above
+
+Answer - A) It is used to raise an exception
+
+8. Which of the following is a common use case of yield keyword in python?
+A) in defining an iterator B) while defining a lambda function
+C) in defining a generator D) in for loop.
+
+Answer - C) in defining a generator
+
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+9. Which of the following are the valid variable names?
+A) _abc B) 1abc
+C) abc2 D) None of the above
+
+Answer - D) None of the above
+
+10. Which of the following are the keywords in python?
+A) yield B) raise
+C) look-in D) all of the above
+
+Answer - A) yield    B) raise
+
+Q11 to Q15 are programming questions. Answer them in Jupyter Notebook.(solutions given for below programming Q/A in IPYNB file)
+11. Write a python program to find the factorial of a number.
+12. Write a python program to find whether a number is prime or composite.
+13. Write a python program to check whether a given string is palindrome or not.
+14. Write a Python program to get the third side of right-angled triangle from two given sides.
+15. Write a python program to print the frequency of each of the characters present in a given string.
