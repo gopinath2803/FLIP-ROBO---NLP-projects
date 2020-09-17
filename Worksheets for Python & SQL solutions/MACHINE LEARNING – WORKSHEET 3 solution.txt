@@ -1,0 +1,274 @@
+				MACHINE LEARNING – WORKSHEET 3
+
+Q1 to Q15 are subjective answer type questions, Answer them briefly.
+1. Give short description each of Linear, RBF, Polynomial kernels used in SVM.
+
+Answer :Polynomial kernel:
+In general, the polynomial kernel is defined as ;
+K(X1,X2) = (a+X1'X2)^b
+b = degree of kernel & a = constant term.
+in the polynomial kernel, we simply calculate the dot product by increasing the power of the kernel.
+Example:
+Let’s say originally X space is 2-dimensional such that
+Xa = (a1 ,a2)
+Xb = (b1 ,b2)
+now if we want to map our data into higher dimension let’s say in Z space which is six-dimensional it may seem like
+Image for post
+In order to solve the solve this dual SVM we would require the dot product of (transpose) Za ^t and Zb.
+Method 1:
+traditionally we would solve this by :
+Image for post
+which will a lot of time as we would have to performs dot product on each datapoint and then to compute the dot product we may need to do 
+multiplications Imagine doing this for thousand datapoints Or else we could simply use
+Method 2:
+using kernel trick:
+Image for post
+In this method, we can simply calculate the dot product by increasing the value of power.
+Radial basis function kernel (RBF):
+Radial Basis Function is another popular Kernel method used in SVM models for more. RBF kernel is a function whose value depends on the 
+distance from the origin or from some point. 
+Gaussian Kernel is of the following format;
+K(X1,X2)=exp(-y||X1 — X2 ||^2)
+||X1 — X2 || = Euclidean distance between X1 & X2
+Using the distance in the original space we calculate the dot product (similarity) of X1 & X2.
+
+Linear Kernel is used when the data is Linearly separable, that is, it can be separated using a single Line. It is one of the most common 
+kernels to be used.
+It is mostly used when there are a Large number of Features in a particular Data Set. One of the examples where there are a lot of features,
+as each alphabet is a new feature. So we mostly use Linear Kernel in Text Classification.
+
+
+
+2. R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of
+model in regression and why??
+
+Answer : R-squared is a better measure of goodness of fit of model in regression.Residual Sum of Squares differentiate the actual value with 
+the predicted value in lines
+
+Sum of Squares Due to Error
+This statistic measures the total deviation of the response values from the fit to the response values. It is also called the summed square 
+of residuals and is usually labelled as SSE.
+
+SSE = Sum(i=1 to n){wi (yi - fi)2}
+Here yi is the observed data value and fi is the predicted value from the fit. wi is the weighting applied to each data point, usually wi = 1.
+
+A value closer to 0 indicates that the model has a smaller random error component, and that the fit will be more useful for prediction.
+
+R-Square
+This statistic measures how successful the fit is in explaining the variation of the data. Put another way, R-square is the square of the 
+correlation between the response values and the predicted response values. It is also called the square of the multiple correlation coefficient 
+and the coefficient of multiple determination.
+
+R-square is defined as
+
+R-square = 1 - [Sum(i=1 to n){wi (yi - fi)2}] /[Sum(i=1 to n){wi (yi - yav)2}] = 1 - SSE/SST
+Here fi is the predicted value from the fit, yav is the mean of the observed data yi is the observed data value. wi is the weighting applied to 
+each data point,usually wi=1. SSE is the sum of squares due to error and SST is the total sum of squares.
+
+R-square can take on any value between 0 and 1, with a value closer to 1 indicating that a greater proportion of variance is accounted for by the 
+model. For example,an R-square value of 0.8234 means that the fit explains 82.34% of the total variation in the data about the average.
+
+If you increase the number of fitted coefficients in your model, R-square will increase although the fit may not improve in a practical sense. To 
+avoid this situation,you should use the degrees of freedom adjusted R-square statistic described below.
+
+Note that it is possible to get a negative R-square for equations that do not contain a constant term. Because R-square is defined as the proportion 
+of variance explained by the fit, if the fit is actually worse than just fitting a horizontal line then R-square is negative. In this case, R-square 
+cannot be interpreted as the square of a correlation. Such situations indicate that a constant term should be added to the model.
+
+
+
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares)
+in regression. Also mention the equation relating these three metrics with each other.
+
+Answer : TSS works as a cost function for a model which does not have an independent variable, but only y intercept (mean ȳ). This gives how good is the model without any 
+independent variable. When independent variable is added the model performance is given by RSS. The ration of RSS/TSS gives how good is the model as compared to the mean 
+value without variance. Lesser is this ratio lesser is the residual error with actual values, and greater is the residual error with the mean. This implies that the model 
+is more robust. So, 1-RSS/TSS is considered as the measure of robustness of the model and is known as R².
+the explained sum of squares (ESS), alternatively known as the model sum of squares or sum of squares due to regression ("SSR" – not to be confused with the residual sum 
+of squares RSS or sum of squares of errors), is a quantity used in describing how well a model, often a regression model, represents the data being modelled. In particular, 
+the explained sum of squares measures how much variation there is in the modelled values and this is compared to the total sum of squares ( TSS ), which measures how much 
+variation there is in the observed data, and to the residual sum of squares, which measures the variation in the error between the observed data and modelled values.
+
+Formula's:
+
+TSS = E1(yi - ȳ)^2
+
+Where:
+E1 = Number of sum as i=1
+yi – the value in a sample
+ȳ – the mean value of a sample
+
+ESS = E1(ŷi - ȳ)^2
+
+Where:
+E1 = Number of sum as i=1
+ŷi – the value estimated by the regression line
+ȳ – the mean value of a sample
+	
+
+RSS = E1(yi - ŷi)^2
+
+Where:
+E1 = Number of sum as i=1
+yi – the observed value
+ŷi – the value estimated by the regression line
+
+
+4. What is Gini –impurity index?
+
+Answer :Gini index or Gini impurity measures the degree or probability of a particular variable being wrongly classified when it is randomly chosen. But what is actually 
+meant by ‘impurity’? If all the elements belong to a single class, then it can be called pure. The degree of Gini index varies between 0 and 1, where 0 denotes that all 
+elements belong to a certain class or if there exists only one class, and 1 denotes that the elements are randomly distributed across various classes. A Gini Index of 0.5
+denotes equally distributed elements into some classes.
+
+Formula for Gini Index :
+ 
+Gini =  1 - E1(pi)
+
+E1 = SUM of n number of i=1
+where pi  is the probability of an object being classified to a particular class.
+
+
+5. Are unregularized decision-trees prone to overfitting? If yes, why?
+
+Answer : Yes ,  they are prone to this because they are very data intensive - that is, they examine the data in a lot of ways. At each node, they look at every possible 
+split of every independent variable (sometimes they impose a rule of monotonicity - if the variable is continuous or ordinal).
+
+Even with a relatively small number of variables, that can be a lot of things to examine, especially if one of them is a categorical variable with more than a few levels. 
+For instance, suppose you have a data set on voting in the USA. Suppose one variable is state - with 50 levels. There are  250≈1.1∗1015  ways to split the data
+
+6. What is an ensemble technique in machine learning?
+
+Answer : Ensemble methods is a machine learning technique that combines several base models in order to produce one optimal predictive model. To better understand this 
+definition lets take a step back into ultimate goal of machine learning and model building.
+
+7. What is the difference between Bagging and Boosting techniques?
+
+Answer :Bagging and Boosting are similar in that they are both ensemble techniques, where a set of weak learners are combined to create a strong learner that obtains better
+performance than a single one
+Bagging and Boosting decrease the variance of your single estimate as they combine several estimates from different models. So the result may be a model with higher stability.
+
+If the problem is that the single model gets a very low performance, Bagging will rarely get a better bias. However, Boosting could generate a combined model with lower errors 
+as it optimises the advantages and reduces pitfalls of the single model.
+
+By contrast, if the difficulty of the single model is over-fitting, then Bagging is the best option. Boosting for its part doesn’t help to avoid over-fitting; in fact, this technique 
+is faced with this problem itself. For this reason, Bagging is effective more often than Boosting.
+
+8. what is out-of-bag error in random forests?
+
+Answer : Out-of-bag (OOB) error, also called out-of-bag estimate, is a method of measuring the prediction error of random forests, boosted decision trees, and other machine learning 
+models utilizing bootstrap aggregating (bagging) to sub-sample data samples used for training. OOB is the mean prediction error on each training sample xᵢ, using only the trees that 
+did not have xᵢ in their bootstrap sample.
+
+9. What is K-fold cross-validation?
+
+Answer :Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.
+
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. 
+When a specific value for k is chosen, it may be used in place of k in the reference to the model, such as k=10 becoming 10-fold cross-validation.
+
+Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. That is, to use a limited sample in order to estimate how the 
+model is expected to perform in general when used to make predictions on data not used during the training of the model.
+
+The general procedure is as follows:
+
+Shuffle the dataset randomly.
+Split the dataset into k groups
+For each unique group:
+Take the group as a hold out or test data set
+Take the remaining groups as a training data set
+Fit a model on the training set and evaluate it on the test set
+Retain the evaluation score and discard the model
+Summarize the skill of the model using the sample of model evaluation scores
+
+It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate of the model skill than other methods, 
+such as a simple train/test split.
+
+10. What is hyper parameter tuning in machine learning and why it is done?
+
+Answer :In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. A hyperparameter is a 
+parameter whose value is used to control the learning process. By contrast, the values of other parameters (typically node weights) are learned.
+The same kind of machine learning model can require different constraints, weights or learning rates to generalize different data patterns. These measures are called hyperparameters, 
+and have to be tuned so that the model can optimally solve the machine learning problem. Hyperparameter optimization finds a tuple of hyperparameters that yields an optimal model 
+which minimizes a predefined loss function on given independent data.[1] The objective function takes a tuple of hyperparameters and returns the associated loss.[1] Cross-validation 
+is often used to estimate this generalization performance.
+
+Hyperparameters are important because they directly control the behaviour of the training algorithm and have a significant impact on the performance of the model is being trained.
+“A good choice of hyperparameters can really make an algorithm shine”.
+Choosing appropriate hyperparameters plays a crucial role in the success of our neural network architecture. Since it makes a huge impact on the learned model. For example, 
+if the learning rate is too low, the model will miss the important patterns in the data. If it is high, it may have collisions.
+Choosing good hyperparameters gives two benefits:
+Efficiently search the space of possible hyperparameters
+Easy to manage a large set of experiments for hyperparameter tuning.
+
+11. What issues can occur if we have a large learning rate in Gradient Descent?
+
+Answer :A learning rate that is too large can cause the model to converge too quickly to a suboptimal solution, whereas a learning rate that is too small can cause the process to get stuck.
+When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error.When the learning rate is too small, training is not only slower, 
+but may become permanently stuck with a high training error.
+
+12. What is bias-variance trade off in machine learning?
+
+Answer :Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the 
+training data and oversimplifies the model. It always leads to high error on training and test data.
+Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data 
+and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data.
+
+model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.
+This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be more complex and less complex at the same time.
+
+Total Error
+To build a good model, we need to find a good balance between bias and variance such that it minimizes the total error.
+
+
+
+13. What is the need of regularization in machine learning?
+
+Answer :Regularisation is a technique used to reduce the errors by fitting the function appropriately on the given training set and avoid overfitting.
+Overfitting is a phenomenon that occurs when a Machine Learning model is constraint to training set and not able to perform well on unseen data.
+The commonly used regularisation techniques are :
+L1 regularisation
+L2 regularisation
+Dropout regularisation
+
+A regression model which uses L1 Regularisation technique is called LASSO(Least Absolute Shrinkage and Selection Operator) regression.
+A regression model that uses L2 regularisation technique is called Ridge regression.
+
+
+14. Differentiate between Adaboost and Gradient Boosting
+
+Answer :AdaBoost stands for Adaptive Boosting. So, basically, we will see the differences between Adaptive Boosting and Gradient Boosting. 
+The basic idea of boosting (an ensemble learning technique) is to combine several weak learners into a stronger one. The general idea of 
+boosting algorithms is to try predictors sequentially, where each subsequent model attempts to fix the errors of its predecessor.
+
+As per documentation:
+
+In Adaboost, ‘shortcomings’ are identified by high-weight data points.
+
+In Gradient Boosting, ‘shortcomings’ (of existing weak learners) are identified by gradients.
+
+Lets elaborate the above statements:
+
+Adaboost is more about ‘voting weights’ and Gradient boosting is more about ‘adding gradient optimization’. 
+
+Adaboost increases the accuracy by giving more weightage to the target which is misclassified by the model. 
+At each iteration, Adaptive boosting algorithm changes the sample distribution by modifying the weights attached 
+to each of the instances. It increases the weights of the wrongly predicted instances and decreases the ones of the 
+correctly predicted instances.
+
+Gradient boosting calculates the gradient (derivative) of the Loss Function with respect to the prediction (instead of the features). 
+Gradient boosting increases the accuracy by minimizing the Loss Function (error which is difference of actual and predicted value) 
+and having this loss as target for the next iteration.
+
+Gradient boosting algorithm builds first weak learner and calculates the Loss Function. It then builds a second learner to predict the 
+loss after the first step. The step continues for third learner and then for fourth learner and so on until a certain threshold is reached.
+
+15. Can we use Logistic Regression for classification of Non-Linear Data? If not, why
+
+Answer : No , Logistic regression is considered a generalized linear model because the outcome always depends on the sum of the inputs 
+and parameters. Or in other words, the output cannot depend on the product (or quotient, etc.) of its parameters!
+Logistic regression is an algorithm that learns a model for binary classification.
+us the probability that a sample belongs to class 1 (or vice versa: class 0). Our objective function is to minimize the so-called logistic function Φ.
+ if φ(z) is larger than 0.5 (alternatively: if z is larger than 0), we classify an input as class 1 (and class 0, otherwise). Although logistic 
+regression produces a linear decision surface (see the classification example in the figure below) this logistic (activation) function doesn’t look 
+very linear at all,
