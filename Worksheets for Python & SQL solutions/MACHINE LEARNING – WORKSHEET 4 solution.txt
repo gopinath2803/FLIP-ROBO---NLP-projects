@@ -1,0 +1,173 @@
+			MACHINE LEARNING – WORKSHEET 4
+In Q1 to Q8, only one option is correct, Choose the correct option:
+1. Which of the following in sklearn library is used for hyper parameter tuning?
+A) GridSearchCV() B) RandomizedCV()
+C) K-fold Cross Validation D) None of the above
+
+Answer - B) RandomizedCV()
+
+2. In which of the below ensemble techniques trees are trained in parallel?
+A) Random forest B) Adaboost
+C) Gradient Boosting D) All of the above
+
+Answer - A) Random forest
+
+3. In machine learning, if in the below line of code:
+ sklearn.svm.SVC (C=1.0, kernel='rbf', degree=3)
+we increasing the C hyper parameter, what will happen?
+A) The regularization will increase B) The regularization will decrease
+C) No effect on regularization D) kernel will be changed to linear
+
+Answer - B) The regularization will decrease
+
+4. Check the below line of code and answer the following questions:
+ sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', max_depth=None,
+min_samples_split=2)
+Which of the following is true regarding max_depth hyper parameter?
+A) It regularizes the decision tree by limiting the maximum depth up to which a tree can be grown.
+B) It denotes the number of children a node can have.
+C) both A & B
+D) None of the above
+
+Answer - D) None of the above
+
+5. Which of the following is true regarding Random Forests?
+A) It's an ensemble of weak learners.
+B) The component trees are trained in series
+C) In case of classification problem, the prediction is made by taking mode of the class labels predicted by the
+component trees.
+D)None of the above
+
+Answer - C) In case of classification problem, the prediction is made by taking mode of the class labels predicted by the
+component trees.
+
+6. What can be the disadvantage if the learning rate is very high in gradient descent?
+A) Gradient Descent algorithm can diverge from the optimal solution.
+B) Gradient Descent algorithm can keep oscillating around the optimal solution and may not settle.
+C) Both of them
+D)None of them.
+
+Answer - A) Gradient Descent algorithm can diverge from the optimal solution.
+
+7. As the model complexity increases, what will happen?
+A) Bias will increase, Variance decrease B) Bias will decrease, Variance increase
+C)both bias and variance increase D) Both bias and variance decrease.
+
+Answer -  C)both bias and variance increase
+
+8. Suppose I have a linear regression model which is performing as follows:
+ Train accuracy=0.95
+ Test accuracy=0.75
+Which of the following is true regarding the model?
+A) model is underfitting B) model is overfitting
+C) model is performing good D) None of the above
+
+Answer -  B) model is overfitting
+
+Q9 to Q15 are subjective answer type questions, Answer them briefly.
+9. Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and
+percentage of class B is 60%. Calculate the Gini index and entropy of the dataset.
+
+Answer - 
+
+# Imports
+from math import log
+
+# calcpercent calculates the number of samples and percentages of each class
+def calcpercent(node):
+    nodesum = sum(node.values())
+    percents = {c:v/nodesum for c,v in node.items()}
+    return nodesum, percents
+
+# giniscore calculates the score for a node using above formula
+def giniscore(node):
+    nodesum, percents = calcpercent(node)
+    score = round(1 - sum([i**2 for i in percents.values()]), 2)
+    print('Gini Score for node {} : {}'.format(node, score))
+    return score
+    
+# entropy score calculates the score for a node using above formula
+def entropyscore(node):
+    nodesum, percents = calcpercent(node)
+    score = round(sum([-i*log(i,2) for i in percents.values()]), 2)
+    print('Entropy Score for node {} : {}'.format(node, score))
+    return score
+
+
+10. What are the advantages of Random Forests over Decision Tree?
+
+Answer - Advantages to using decision trees:
+1. Easy to interpret and make for straightforward visualizations.
+2. The internal workings are capable of being observed and thus make it possible to reproduce work.
+3. Can handle both numerical and categorical data.
+4. Perform well on large datasets
+5. Are extremely fast
+
+ random forests are a strong modeling technique and much more robust than a single decision tree.
+They aggregate many decision trees to limit overfitting as well as error due to bias and therefore yield useful results.
+
+11. What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+WORKSHEET
+
+Answer - Feature scaling in machine learning is one of the most critical steps during the pre-processing
+of data before creating a machine learning model. Scaling can make a difference between a weak machine
+learning model and a better one.
+The most common techniques of feature scaling are Normalization and Standardization.
+Normalization is used when we want to bound our values between two numbers, typically, between [0,1] or [-1,1].
+While Standardization transforms the data to have zero mean and a variance of 1, they make our data unitless.
+Machine learning algorithm just sees number — if there is a vast difference in the range say few ranging in 
+thousands and few ranging in the tens, and it makes the underlying assumption that higher ranging numbers have 
+superiority of some sort. So these more significant number starts playing a more decisive role while training the model.
+The machine learning algorithm works on numbers and does not know what that number represents. A weight of 10 grams 
+and a price of 10 dollars represents completely two different things — which is a no brainer for humans, but for a 
+model as a feature, it treats both as same.
+Feature scaling is essential for machine learning algorithms that calculate distances between data. If not scale, 
+the feature with a higher value range starts dominating when calculating distances, as explained.
+The ML algorithm is sensitive to the “relative scales of features,” which usually happens when it uses the 
+numeric values of the features rather than say their rank.
+In many algorithms, when we desire faster convergence, scaling is a MUST like in Neural Network.
+
+
+12. Write down some advantages which scaling provides in optimization using gradient descent algorithm.
+
+Answer -  main advantages:
+We can use fixed learning rate during training without worrying about learning rate decay.
+It has straight trajectory towards the minimum and it is guaranteed to converge in theory to the global minimum 
+if the loss function is convex and to a local minimum if the loss function is not convex.
+It has unbiased estimate of gradients. The more the examples, the lower the standard error.
+
+13. In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to measure the
+performance of the model. If not, why?
+
+Answer - 
+
+14. What is “f-score" metric? Write its mathematical formula.
+
+Answer - The F-score, also called the F1-score, is a measure of a model’s accuracy on a dataset. It is used to 
+evaluate binary classification systems, which classify examples into ‘positive’ or ‘negative’.
+
+The F-score is a way of combining the precision and recall of the model, and it is defined as the harmonic mean of the 
+model’s precision and recall.
+
+The F-score is commonly used for evaluating information retrieval systems such as search engines, and also for many kinds 
+of machine learning models, in particular in natural language processing.
+
+It is possible to adjust the F-score to give more importance to precision over recall, or vice-versa. Common adjusted 
+F-scores are the F0.5-score and the F2-score, as well as the standard F1-score.
+
+F-score Formula
+The formula for the standard F1-score is the harmonic mean of the precision and recall. A perfect model has an F-score of 1.
+
+F1 = _____2_______     =   2 *  precision * recall   
+      __1__ *__1____            __________________
+      recall precision          precision + recall
+ 
+   = _____tp_______
+     tp + 1/2(fp+fn)
+
+
+15. What is the difference between fit(), transform() and fit_transform()?
+
+Answer - "fit" computes the mean and std to be used for later scaling. (just a computation), nothing is given to you. 
+"transform" uses a previously computed mean and std to autoscale the data (subtract mean from all values and then divide it by std). 
+"fit_transform" does both at the same time.
