@@ -1,0 +1,119 @@
+WORKSHEET-2
+DEEP LEARNING
+Q1 to Q8 are MCQs with only one correct answer. Choose the correct option.
+1. Operations in the neural networks can performed _______?
+A) serially B) parallely
+C) serially or parallely D) None of the above
+
+Answer - C) serially or parallely
+
+2. Who proposed the first perceptron model and when?
+A) Rosenblatt, 1958 B) McCulloch-pitts, 1958
+C) John Hopfield, 1982 D) McCulloch-pitts, 1982
+
+Answer - Rosenblatt, 1958
+
+3. Which one of these plots represents a ReLU activation function?
+A) B)
+C) D)
+
+Answer - C)
+
+4. In a simple artificial neural network with 5 neurons in the input layer, 8 neurons in the hidden layer and 3
+neurons in the output layer. What is the size of the weight matrices between hidden-output layers and inputhidden layers?
+A) [3×8], [5×8] B) [8×3], [5×8]
+C) [5×8], [8×5] D) [8×3], [5×3]
+
+Answer - B) [8×3], [5×8]
+
+5. What is a dead unit in a neural network?
+A) A unit which does not respond completely to any of the training patterns
+B) The unit which produces the biggest sum-squared error
+C) A unit which doesn’t update during training by any of its neighbour
+D) None of these
+
+Answer - C) A unit which doesn’t update during training by any of its neighbour
+
+6. Which of the following functions can be used as an activation function if we wish to predict the probabilities
+of n classes such that sum of all n probabilities is equal to 1?
+A) sigmoid B) softmax
+C) tanh D) ReLU
+
+Answer - B) softmax
+
+7. The amount of output of one unit received by another unit depends on what?
+A) output unit B) input unit
+C) activation values D) weights
+
+Answer - D) weights
+
+8. What is asynchronous update in neural networks?
+A) output units are updated parallely B) output units are updated sequentially
+C) either sequentially or parallely D) None of the above
+
+Answer - B) output units are updated sequentially
+
+Q9 and Q10 are MCQs with one or more correct answers. Choose all the correct options.
+9. Which of the following techniques can be used to reduce overfitting in a neural network?
+A) EarlyStopping B) Dropout
+C) checkpoints D) ReduceLROnPlateau
+
+Answer - A) , B)
+
+10. Why is an RNN used for machine translation, say translating English to Hindi?
+A) It can be trained as a supervised learning problem.
+B) It is strictly more powerful than a Convolutional Neural Network
+C) It is applicable when the input/output is a sequence (e.g., a sequence of words)
+D) RNNs represent the recurrent process of Idea->Code->Experiment->Idea->....
+
+Answer - A)  ,  C)
+
+Q11 to Q15 are subjective answer type question. Answer them briefly.
+11. The output of a perceptron is calculated as follows:
+1
+( )
+n
+i i
+i
+y f b w x
+
+ 
+Where
+f x( )
+is the activation function. If you want to build a perceptron which gives an output for linear
+regression, what will be the activation function you would use?
+
+Answer - the activation function will be "sigmoid function"
+
+12. What will happen if we use very large or very small learning rates?
+
+Answer - large learning rate:
+A learning rate that is too large can cause the model to converge too quickly to a suboptimal solution,
+the global minima will never come to end, as learning rate is large then the new weight will come in negative which will never reach to global minima. 
+     
+small learning rate:
+For learning rate that is too small can cause the process to get stuck,there is very small change in new weight at the time of back propagation and 
+the time to reach global minima will increase.
+
+13. Below is a diagram if a single artificial neuron:
+The node has three inputs x = (x1, x2, x3) that receive only binary signals (either 0 or 1). How many different
+input patterns this node can receive? What if the node had four, five inputs? Can you give a formula that
+computes the number of binary input patterns for a given number of inputs?
+
+Answer - 8 different input patterns this node can receive
+16 different input patterns this node can receive in case of 4 nodes 
+32 different input patterns this node can receive in case of 5 nodes 
+it is a binary input function as there fore we can using simply 2 to the power n (n= no of nodes)
+
+14. What Are Vanishing and Exploding Gradients?
+
+Answer - In a network of n hidden layers, n derivatives will be multiplied together. If the derivatives are large then the gradient will increase exponentially 
+as we propagate down the model until they eventually explode, and this is what we call the problem of exploding gradient. Alternatively, if the derivatives
+are small then the gradient will decrease exponentially as we propagate through the model until it eventually vanishes, and this is the vanishing gradient problem.
+
+
+15. What Is the Difference Between Epoch, Batch, and Iteration in Deep Learning?
+
+Answer - An epoch is when an entire dataset is passed forward and backward through the neural network only once.
+The batch size is a hyperparameter that defines the number of samples to work through before updating the internal model parameters
+Iterations is the number of batches needed to complete one epoch . So, every time you pass a batch of data through the NN, you completed an iteration

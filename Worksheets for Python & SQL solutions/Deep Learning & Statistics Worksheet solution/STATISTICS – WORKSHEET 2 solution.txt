@@ -1,0 +1,160 @@
+			STATISTICS – WORKSHEET 2
+
+Q1 to Q15 have only one correct answer. Choose the correct option to answer your question.
+1 . What represent a population parameter?
+a) SD
+b) mean
+c) both
+d) none
+Answer:- b) mean
+
+
+
+
+2. What will be median of following set of scores (18,6,12,10,15)?
+a) 14
+b) 18
+c) 12
+d) 10
+Answer:- c) 12
+
+
+
+
+3. What is standard deviation?
+a) An approximate indicator of how number vary from the mean
+b) Ameasure of variability
+c) The square root of the varience
+d) All of the above
+Answer:- d) All of the above
+
+
+
+
+
+4. The intervals should be in a grouped frequency distribution
+a) Exhaustive
+b) Mutually exclusive
+c) Both of these
+d) None
+Answer:- c) Both of these
+
+
+
+
+
+5. What is the goal of descriptive statistics?
+a) Monitering and manuplating a specific data
+b) Summerizing and explaining a specific set of data
+c) Analysing and interpreting a set of data
+d) All of these
+Answer:- b) Summerizing and explaining a specific set of data
+
+
+
+
+6. A set of data organized in a participants by variables format is called
+a) Data junk
+b) Data set
+c) Data view
+d) Data dedging
+Answer:- b) Data set
+
+
+
+
+
+7. In multiple regression dependent variables are used
+a) 2 or more
+b) 2
+c) 1
+d) 1 or more
+Answer:- c) 1
+
+
+
+
+
+8. Which of the following is used when you want to visually examine the relationship Between 2 quatitive
+variables?
+a) Line graph
+b) Scatterplot
+c) Bar graph
+d) Pie graph
+Answer:- b) Scatterplot
+
+
+
+
+
+9. Two or more groups means are compared by using
+a) analysis
+b) Data analysis
+c) Varied Varience analysis
+d) Analysis of varience
+Answer:- d) Analysis of varience
+
+
+
+
+
+10. is a raw score which has been transformed into standard deviation units
+a) Z-score
+b) t-score
+c) e-score
+d) SDU score
+Answer:- a) Z-score
+
+
+
+
+
+11. is the value calculated when you want the arithmetic average
+a) Median
+b) mode
+c) mean
+d) All
+Answer:- c) mean
+
+
+
+
+
+12. Find the mean of ths set of number(4,6,7,9,2000000)?
+a) 4
+b) 7
+c) 7.5
+d) 400005.2
+Answer:- b) 7
+
+
+
+
+13. is a measure of central tendency that takes into account the magnitude of scores?
+a) Range
+b) Mode
+c) Median
+d) Mean
+Answer:- c) median
+
+
+
+
+
+14. focuses on describing or explaining data wheras involves going beyond immediate data and making
+inferences
+a) Descriptive and inferences
+b) Mutually exclusive and mutually exhaustive properties
+c) Positive skew and negative skew
+d) Central tendency
+Answer:- a) Descriptive and Inferences
+
+
+
+
+15. What is the formula for range.
+a) H+L
+b) L-H
+c) LXH
+d) H-L
+Answer:- d) H-L
