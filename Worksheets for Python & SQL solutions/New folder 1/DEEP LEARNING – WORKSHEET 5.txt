@@ -1,0 +1,67 @@
+		DEEP LEARNING – WORKSHEET 5
+Q1 to Q8 are MCQs with only one correct answer. Choose the correct option.
+1. Which of the following are advantages of batch normalization?
+A) Reduces internal covariant shift.
+B) Regularizes the model and reduces the need for dropout, photometric distortions, localresponse
+normalization and other regularization techniques.
+C) allows use of saturating nonlinearities and higher learning rates.
+D) All of the above
+ANSWER -  D
+
+2. Which of the following is not a problem with sigmoid activation function?
+A) Sigmoids do not saturate and hence have faster convergence
+B) Sigmoids have slow convergence.
+C) Sigmoids saturate and kill gradients.
+D) Sigmoids are not zero centered; gradient updates go too far in different directions, makingoptimization
+more difficult.
+ANSWER -  B
+
+3. Which of the following is not an activation function?
+A) Swish B) Maxout
+C) SoftPlus D) None of the above
+ANSWER -  B
+
+4. The tanh activation usually works better than sigmoid activation function for hidden units because the mean of
+its output is closer to zero, and so it centers the data better for the next layer. True/False?
+A) True B) False
+ANSWER -  A
+
+5. In which of the weights initialisation techniques, does the variance remains same with each passing layer?
+A) Bias initialisation B) Xavier Initialisation
+C) He Normal Initialisation D) None of these
+ANSWER -  B
+
+6. Which of the following is main weakness of AdaGrad?
+A) learning rate shrinks and becomes infinitesimally small
+B) learning rate doesn’t shrink beyond a point
+C) change in learning rate is not adaptive
+D) AdaGrad adapts updates to each individual parameter
+ANSWER -  A
+
+7. In order to achieve right convergence faster, which of the following criteria is most suitable?
+A) momentum and learning rate both must be high
+B) momentum must be high and learning rate must be low
+C) momentum and learning rate both must be low
+D) momentum must be low and learning rate must be high
+ANSWER -  C
+
+8. When is an error landscape is said to be poor(ill) conditioned?
+A) when it has many local minima
+B) when it has many local maxima
+C) when it has many saddle points and flat areas
+D) None of these
+ANSWER -  C
+
+Q9 and Q10 are MCQs with one or more correct answers. Choose all the correct options.
+9. Which of the following Gradient Descent algorithms are adaptive?
+A) ADAM B) SGD
+C) NADAM D) RMS Prop.
+WORKSHEET
+ANSWER -  A
+
+10. When should an optimization function (gradient descent algorithm) stop training:
+A) when it reaches local minimum B) when it reaches saddle point
+C) when it reaches global minimum
+D) when it reaches a local minima which is similar to global minima (i.e. which has very less error distance
+with global minima)
+ANSWER -  C
