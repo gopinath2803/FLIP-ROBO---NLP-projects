@@ -1,0 +1,60 @@
+				SQL – WORKSHEET 4
+Refer the following ERD and answer all the questions in this worksheet. You have to write the queries using 
+
+1. Write SQL query to show average number of orders shipped in a day (use Orders table).
+
+Ans):SELECT `shippedDate`, avg(orderNumber)  FROM orders  GROUP BY ` shippedDate`;
+
+2. Write SQL query to show average number of orders placed in a day.
+
+Ans): SELECT `orderDate`, avg(orderNumber)  FROM orders  GROUP BY ` orderDate`;
+
+
+3. Write SQL query to show the product name with minimum MSRP (use Products table).
+Ans):SELECT `ProductName` , max(MSRP)  FROM products;
+
+
+4. Write SQL query to show the product name with maximum value of stockQuantity.
+
+Ans):SELECT `ProductName` , max(quantityInStock)  FROM products;
+
+5. Write a query to show the most ordered product Name (the product with maximum number of orders).
+Ans):SELECT ‘productName’ FROM Products  INNER JOIN Orderdetails  ON Products.’productCode’ = Orderdetails.’productCode’  GROUP BY Products.’productCode’  ORDER BY  Sum(‘quantityOrdered’) DESC LIMIT 1;
+
+
+6. Write a SQL query to show the highest paying customer Name.
+Ans):SELECT ‘customerName’ from customers INNER JOIN Payments ON customers.’customerNumber’=payments.’customerNumber’ GROUP BY Products.’customerNumber’  ORDER BY  Sum(‘amount’) DESC LIMIT 1;
+
+
+7. Write a SQL query to show cutomerNumber, customerName of all the customers who are from Melbourne city.
+Ans):SELECT ‘customerNumber’,’customerName’ from customer where city=’Melbourne’;
+
+8. Write a SQL query to show name of all the customers whose name start with “N”.
+Ans):SELECT ’customerName’ from customer where customerName LIKE ‘N’;
+
+
+9. Write a SQL query to show name of all the customers whose phone start with ‘^7.*’ and are from city ‘Las
+Vegas’.
+Ans): SELECT ’customerName’ from customer where phone LIKE ‘‘^7.*’ AND where city=’Las Vegas’;
+
+10. Write a SQL query to show name of all the customers whose creditLimit < 1000 and city is either “Las Vegas”
+or ”Nantes” or “Stavern”.
+Ans): SELECT ’customerName’ from customer where creditLimit< 1000 AND where city=’Las Vegas’ OR city=‘Nantes’ OR city=Stavern ;
+
+
+11. Write a SQL query to show all the orderNumber in which quantity ordered <10.
+Ans): SELECT ‘orderNumber’,’quantityOrdered’ FROM orderdetails WHERE Sum(’quantityOrdered’)<10;
+
+12. Write a SQL query to show all the orderNumber whose customer Name start with letter N.
+Ans): SELECT ‘orderNumber’ from orders INNER JOIN customers ON orders.customerNumber=customers. customerNumber WHERE customerName LIKE ’N’;
+
+13. Write a SQL query to show all the customerName whose orders are “Disputed” in status.
+Ans): SELECT ‘customerName’ from customers INNER JOIN orders ON customers.customerNumber=orders. customerNumber WHERE status = ‘Disputed’;
+
+
+14. Write a SQL query to show the customerName who made payment through cheque with checkNumber starting
+with H and made payment on “2004-10-19”.
+Ans): SELECT ‘customerName’ from customers INNER JOIN Payments ON customers.’customerNumber’=payments.’customerNumber’ GROUP BY Payments.’checkNumber’  WHERE checkNumber LIKE ‘H’ AND paymentDate=’2004-10-19’;
+
+15. Write a SQL query to show all the checkNumber whose amount > 1000.
+Ans): SELECT ‘checkNumber’,’amount’ from payments WHERE amount>1000;
