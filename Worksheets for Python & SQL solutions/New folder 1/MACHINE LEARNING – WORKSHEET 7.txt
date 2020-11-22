@@ -1,0 +1,103 @@
+								WORKSHEET
+							MACHINE LEARNING – WORKSHEET 7
+All the questions in this exercise have one or more than one correct answers. Choose all the correct options to
+answer your questions.
+
+1. Which of the following statements are true regarding SVMs?
+A) SVMs use hyperplanes as decision boundary for classification.
+B) SVMs uses kernel functions to avoid computational load of converting the whole dataset in to higher
+ dimensional space where the data is linearly separable.
+C) SVMs can separate classes only when the data is linearly separable.
+D) SVMs use hard margin classifier.
+
+Ans):A) SVMs use hyperplanes as decision boundary for classification.
+
+
+2. Consider the radial basis kernel function given below and answer the following question:
+ k(x, x0) = exp(−γ||x − x0 ||2)
+
+In the above figure we have two curves for two radial basis function with different values of gammas. Which
+of these curves has higher values of gamma?
+A) Red B) Blue
+C) Both are equal D) cannot be determined from the curve
+
+Ans):C) Both are equal
+
+
+3. Which of these statements are true regarding the RBF kernel of SVM?
+A) The RBF is used to find the linear classifier for the data in to infinite dimensional space.
+B) Higher the value of gamma of RBF the more flexible the classifier curve becomes in the original
+ dimensions.
+C) A very high value of gamma may lead to overfitting.
+D) None of the above
+
+Ans):B) Higher the value of gamma of RBF the more flexible the classifier curve becomes in the original
+ dimensions.
+
+
+4. Consider the following graph and answer the question given below:
+Consider the above figure where triangles represent class A data points and rectangles represent Class B.
+Which of the following classifier can be used here?
+A) A Hard Margin Linear Classifier B) A Soft Margin Linear classifier
+C) Both of them can be used D) None of the above
+
+
+Ans):B) A Soft Margin Linear classifier
+
+
+5. Consider the following image and answer the question:
+What will happen if we decrease the value of C, the soft margin constant?
+A) The margin width will decrease B) The margin width will Increase
+C) There will be no effect on the margin D) The classifier will become non linear
+
+Ans):A) The margin width will decrease
+
+
+6. Consider the following image and answer the question:
+Figure A: Figure B:
+In the above figure red circles represent class A data points and plus sign represents Class B. Both of the figures
+are on the same data. Among the above given figure-A and Figure-B, which of these figure have higher value
+of C hyperparameter?
+A) Figure A B) Figure B
+C) Both have same value D) Cannot be determined
+
+Ans):A) Figure A 
+
+
+
+7. In the following figures red circles represent Class A data points and plus represent Class B data points. We
+are using a linear kernel with Degrees D1, D2 and D3 as shown in the figures A, B and C respectively.
+Fig A: D1 Degree polynomial Fig B: D2 degree Fig C: D3 degree
+margin
+WORKSHEET
+Now which of the following is true regarding the degrees?
+A) D1>D2>D3 B) D3>D1>D2
+C) D3>D2>D1 D) D3=D2=D1
+Ans):C) D3>D2>D1 
+
+
+
+8. In the following figures red circles represent Class A data points and plus represent Class B data points. In the
+below figures we are using RBF kernel with varying degrees Gamma:
+Gamma 1 Gamma2
+Now choose the correct options:
+A) Gamma2 = Gamma1 B) Gamma1 > Gamma2
+C) Gamma2 > Gamma 1 D) None of the above
+Ans):A) Gamma2 = Gamma1
+
+
+
+
+9. Let us assume you are using RBF kernel in SVM with a very high Gamma value. What does this signify?
+A) The model would consider even far away points from hyperplane for modelling
+B) The model would consider only the points close to the hyperplane for modelling
+C) The model would not be affected by distance of points from hyperplane for modelling
+D) None of the above
+Ans):C) The model would not be affected by distance of points from hyperplane for modelling
+
+
+
+10. What would happen when you use very small C (C~0)?
+A) A large number of misclassification would happen B) Data will be correctly classified
+C) Can’t say D) None of these
+Ans):C) Can’t say
