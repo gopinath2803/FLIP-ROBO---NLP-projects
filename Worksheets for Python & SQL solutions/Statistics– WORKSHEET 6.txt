@@ -1,0 +1,152 @@
+			WORKSHEET
+		 Statistics– WORKSHEET 6
+
+Q1 to Q9 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following is the correct formula for total variation?
+a) Total Variation = Residual Variation – Regression Variation
+b) Total Variation = Residual Variation + Regression Variation
+c) Total Variation = Residual Variation * Regression Variation
+d) All of the mentioned
+Answer:- b) Total Variation = Residual Variation + Regression Variation
+
+
+
+
+2. Collection of exchangeable binary outcomes for the same covariate data are called outcomes.
+a) random
+b) direct
+c) binomial
+d) none of the mentioned
+Answer:- c) binomial
+
+
+
+
+
+3. How many outcomes are possible with bernoulli trial?
+a) 2
+b) 3
+c) 4
+d) None of the mentioned
+Answer:- a) 2
+
+
+
+
+
+4. If Ho is true and we reject it, then it is called:
+(a) Type-I error
+(b) Type-II error
+(c) Standard error
+(d) Sampling error
+Answer:- (a) Type-I error
+
+
+
+
+
+5. Level of significance is also called:
+(a) Power of the test
+(b) Size of the test
+(c) Level of confidence
+(d) Confidence coefficient
+Answer:- (d) Confidence coefficient 
+
+
+
+
+
+6. The chance of rejecting a true hypothesis decreases when sample size:
+(a) Decreases
+(b) Increases
+(c) Both of them
+(d) None of them
+Answer:- (b) Increases
+
+
+
+
+
+7. Which of the following testing is concerned with making decisions using data?
+(a) Probability
+(b) Hypothesis
+(c) Causal
+(d) None of the mentioned
+Answer:- (b) Hypothesis
+
+
+
+
+8. What is the purpose of multiple testing in statistical inference?
+(a) Minimize errors
+(b) Minimize false positives
+(c) Minimize false negatives
+(d) All of the mentioned
+Answer:- (d) All of the mentioned
+
+
+
+
+
+9. Normalized data is centered at and has unit equal to standard deviations of the original data.
+(a) 0 (b) 5
+(c) 1 (d) 10
+Answer:- (a) 0
+
+
+
+
+Q10and Q15 are subjective answer type questions, Answer them in your own words briefly.
+10. What Is Bayes' Theorem?
+Answer:- In probability theory and statistics, Bayes' theorem describes the probability of an event, based on 
+prior knowledge of conditions that might be related to the event. For example, if the risk of developing health 
+problems is known to increase with age, Bayes' theorem allows the risk to an individual of a known age to be 
+assessed more accurately (by conditioning it on his age) than simply assuming that the individual is typical 
+of the population as a whole.The formula is: P(A|B) = P(A) P(B|A)P(B) ..
+
+
+
+
+11. What is z-score?
+Answer:-  a z-score (also called a standard score) gives you an idea of how far from the mean a data point is. 
+But more technically it’s a measure of how many standard deviations below or above the population mean a raw score. 
+The basic z score formula for a sample is:
+
+z = (x – μ) / σ
+
+
+
+
+12. What is t-test? 
+Answer:-  A t-test is used as a hypothesis testing tool, which allows testing of an assumption it used to determine 
+if there is a significant difference between the means of two groups, which may be related in certain features. t=\frac{m-\mu}{s / \sqrt{n}}
+t	=	Student's t-test
+m	=	mean
+\mu	=	theoretical value
+s	=	standard deviation
+{n}	=	variable set size
+
+
+
+
+
+13. What is a percentile?
+Answer:- In statistics, a percentile is a type of quantile which divides the given probability distribution, or sample, 
+into 100 equal-sized intervals; this allows the data to be analyzed in terms of percentages.
+
+
+
+
+14. What is ANOVA?
+Answer:- Analysis of variance is a collection of statistical models and their associated estimation procedures used to 
+analyze the differences among group means in a sample. It aggregate variability found inside a data set into two parts: 
+systematic factors and random factors.
+
+
+
+
+15. How can ANOVA help?
+Answer:- An ANOVA helps to find out if survey or experiment results are significant. In other words, they help you to 
+figure out if you need to reject the null hypothesis or accept the alternate hypothesis. Basically, you're testing groups 
+to see if there's a difference between them.
+
