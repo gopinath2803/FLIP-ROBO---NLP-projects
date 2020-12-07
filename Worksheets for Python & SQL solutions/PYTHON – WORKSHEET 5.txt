@@ -1,0 +1,206 @@
+		WORKSHEET
+	  PYTHON – WORKSHEET 5
+
+
+Q1 to Q10 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following operators can be used to concatenate two lists?
+A) * B) &
+C) + D) none of the above
+Answer:- C) +
+
+
+
+
+
+
+2. Consider the below two statements and select the correct option accordingly
+i. List is an immutable data type like strings.
+ ii. Lists are two dimenionsal data-structures.
+A) i-True, ii-False B) i-True, ii-True
+C) i-False, ii-False D) i-False, ii-True
+Answer:- A) i-True, ii-False 
+
+
+
+
+
+
+3. What will be the output of the following list comprehension?
+ L=[x.upper() for x in [“abc”,” rahul”,” nitin”]]
+A) [“aBc”,” Rahul”,” nitIN”] B) [“ABC”,” RAHUL”,” NITIN”]
+C) [“ABc”,” RAHul”,” NItin”] D) None of the above
+Answer:- B) [“ABC”,” RAHUL”,” NITIN”]
+
+
+
+
+
+
+4. What will be the output of the following list comprehension?
+ L = [x for x in [1,2,3,4,5,6] if x%2==0]
+A) [2,3,4] B) [1,3,4]
+C) [4,5,6] D) [2,4,6]
+Answer:- D) [2,4,6]
+
+
+
+
+
+
+5. What will be the output of the following line of code?
+ A = [2,3,45,6,8,9]
+ B = A[1:4]
+ C = [ x for x in B if x%2==0]
+A) [3,45,6] B) [45]
+C) [6] D) [45,6]
+Answer:- C) [6]
+
+
+
+
+
+
+
+6. What will be the output of following lines of code?
+a = {1,4,6,8}
+b = {2,4,6,8}
+c = {1,3,5,7}
+print(a.intersection(a.difference(b)))
+A) {2,3} B) {3,5}
+C) {1,7} D) None of the above
+Answer:- D) None of the above
+
+
+
+
+
+
+
+7. What will be the output of the following lines of code?
+ A = {1,22,22,3}
+ print(a)
+A) {1,22,22,3} B) error
+C) {1,3,22} D) None of the above
+Answer:- D) None of the above
+
+
+
+
+
+
+
+8. By which of the following ways you can access the set {1,2,3} in the following line of code?
+ a=["asd",["d",{1,2,3},3],23]
+A) a[0][2] B) a[1][0]
+C) a[1][1] D) None of the above
+Answer:- C) a[1][1]
+
+
+
+
+
+
+9. Which of the following is not a method of sets in python?
+A) difference() B) intersection()
+C) symmetric_difference() D) None of the above
+Answer:- D) None of the above
+
+
+
+
+
+
+10. Which of the following is true with respect to sets in python? (More Than One options may be correct.
+Mark all the correct options)
+A) sets are one-dimensional data structures
+B) no two elements of a set can be same
+C) sets are immutable
+D) All of the above.
+Answer:- A) sets are one-dimensional data structures
+
+
+
+
+
+
+Q11 is subjective answer type question, answer it briefly.
+11. List any two major differences between lists and sets in python.
+Answer:- List: 1)List can be 2-D whereas a set can't.
+	       2)As list are ordered (IE. have serial number) list are comparatively slow to execute whereas sets are fast.
+
+
+
+
+Q12 to Q15 are programming questions. Answer them in Jupyter Notebook.
+12. write a python program to square the elements of a list by using list comprehension.
+Answer:- # Below is the Code 
+numbers = [1, 2, 3, 4, 5]
+
+squared_numbers = [number ** 2 for number in numbers]
+
+print(squared_numbers)
+
+
+
+
+
+
+13. Write a pyhton program to drop duplicate elements from a list of numbers.
+Answer:- ##Program to drop duplicate elements from a list of numbers.
+a = [10,20,30,20,10,50,60,40,80,50,40]
+
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+
+print(dup_items)
+
+
+
+
+
+
+14. Take two sets of numbers and try implementing the set operations - intersection, union, difference and
+symmetric_difference between them.
+Answer:- 
+# Program to perform different set operations 
+# as we do in  mathematics 
+  
+# sets are define 
+A = {0, 2, 4, 6, 8}; 
+B = {1, 2, 3, 4, 5}; 
+  
+# union 
+print("Union :", A | B) 
+  
+# intersection 
+print("Intersection :", A & B) 
+  
+# difference 
+print("Difference :", A - B) 
+  
+# symmetric difference 
+print("Symmetric difference :", A ^ B) 
+
+
+
+
+
+
+15. Write a python program to add the elements of a set.
+Answer:- # set of vowels
+vowels = {'a', 'e', 'i', 'u'}
+
+# adding 'o'
+vowels.add('o')
+print('Vowels are:', vowels)
+
+# adding 'a' again
+vowels.add('a')
+print('Vowels are:', vowels)
+
+
+
