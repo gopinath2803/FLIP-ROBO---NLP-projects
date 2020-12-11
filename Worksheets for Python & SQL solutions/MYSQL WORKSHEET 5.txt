@@ -1,0 +1,57 @@
+			MYSQL WORKSHEET 5
+
+1. Write SQL query to show all the data in the Movie table 
+
+SELECT * FROM movie;
+
+2. Write SQL query to show the title of the longest runtime movie
+
+SELECT title FROM movie WHERE runtime=(SELECT MAX(runtime) FROM movie);
+
+3. Write SQL query to show the highest revenue generating movie title
+
+SELECT title FROM movie WHERE revenue=(SELECT MAX(revenue) FROM movie);
+
+4. Write SQL query to show the movie title with maximum value of revenue/budget.
+
+SELECT title FROM movie WHERE revenue=(SELECT MAX(revenue) FROM movie) OR budget = (SELECT MAX(budget) FROM movie)
+
+5. Write a SQL query to show the movie title and its cast details like name of the person, gender, character
+name, cast order.
+SELECT title, person_name, gender, character_name, cast_order FROM movie INNER JOIN movie_cast, person, gender on movie_id.movie=movie_id.movie_cast, gender_id.gender=gender_id.movie_cast, person_id.person=movie_id.movie_cast; 
+
+6. Write a SQL query to show the country name where maximum number of movies has been produced, along
+with the number of movies produced.
+SELECT country_name.country, count(movie_id) FROM production_country INNER JOIN country GROUP_BY COUNTRY_ID SORT DESC LIMIT 1;   
+
+
+7. Write a SQL query to show all the genre_id in one column and genre_name in second column.
+SELECT * FROM genre
+
+8. Write a SQL query to show name of all the languages in one column and number of movies in that
+particular column in another column.
+SELECT language_name, COUNT(movie_id) FROM language INNER JOIN movie_languages on language_id.language=language_id.movie_languages GROUP_BY language_id;
+
+9. Write a SQL query to show movie name in first column, no. of crew members in second column and
+number of cast members in third column.
+SELECT title.movie, count(person_id.movie_crew), count(person_id.movie_cast) FROM movie INNER JOIN movie_crew, movie_cast on movie_id.movie=movie_id.movie_cast, movie_id.movie=movie_id.movie_crew
+
+10. Write a SQL query to list top 10 movies title according to popularity column in decreasing order.
+SELECT movie_id, popularity FROM movie ORDER BY popularity DESC LIMIT 10;
+
+11. Write a SQL query to show the name of the 3rd most revenue generating movie and its revenue.
+SELECT title, revenue FROM movie ORDER BY revenue DESC LIMIT 3 WHERE revenue NOT IN (SELECT revenue FROM movie ORDER BY revenue DESC LIMIT 2);
+
+12. Write a SQL query to show the names of all the movies which have “rumoured” movie status.
+SELECT title FROM movie WHERE movie_status='rumoured';
+
+13. Write a SQL query to show the name of the “United States of America” produced movie which generated
+maximum revenue.
+SELECT title FROM movie INNER JOIN production_country, country on movie_id.movie=movie_id.production_country, country_id.country=country_id.production_country WHERE country_name='United States of America' AND revenue=SELECT max(revenue) GROUPBY country_name;
+
+14. Write a SQL query to print the movie_id in one column and name of the production company in the second
+column for all the movies.
+SELECT movie_id.movie, company_name.production_company FROM movie INNER JOIN movie_company, production_company on movie_id.movie=movie_id.movie_company, company_id.production_company=company_id.movie_company;
+
+15. Write a SQL query to show the title of top 20 movies arranged in decreasing order of their budget
+SELECT title FROM MOVIE ORDERBY budget DESC LIMIT 20;
